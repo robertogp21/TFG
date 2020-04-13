@@ -83,20 +83,12 @@ string DecisionTree::mostCommonTarget(const vector<Example> & examples) const{
 }
 
 
-void printMap(const map<string, int>& m){
-  for (map<string, int>::const_iterator it = m.begin(); it != m.end(); ++it){
-    cout << endl << it->first << endl << it->second << endl;
-  }
-  cout << endl;
-}
-
 map<string, int> DecisionTree::countClasses(const vector<Example>& examples) const{
   map<string,int> counter;
   for (int i = 0; i < examples.size(); i++){
     ++counter[examples[i].getTarget()];
     ++counter["total"];
   }
-  //printMap(counter);
   return counter;
 }
 
@@ -147,11 +139,6 @@ string DecisionTree::selectBestAttribute(const vector<Example>& examples, const 
     }
   }
 
-  for (auto it = gains.begin(); it != gains.end(); ++it)
-    cout << *it << " ";
-  cout << endl;
-  cout << argmax(gains);
-  char x; cin >> x;
   return attributes[argmax(gains)];
 }
 
@@ -181,8 +168,7 @@ void DecisionTree::ID3(const vector<Example>& examples){
 
 
 void DecisionTree::ID3(const vector<Example>& examples, vector<string>& attributes, Node*& current_node){
-  /*assert(!examples.empty());
-  assert(!attributes.empty());*/
+
   if (sameClass(examples)){
     current_node->setLabel(examples[0].getTarget());
     current_node->markAsLeaf();
@@ -194,37 +180,17 @@ void DecisionTree::ID3(const vector<Example>& examples, vector<string>& attribut
     current_node->markAsLeaf();
     return;
   }
-/*
-  for (int i=0; i < attributes.size(); i++)
-    cout << attributes[i] << " "; cout << endl;
-*/
+
   string best_attribute = selectBestAttribute(examples, attributes);
   current_node->setLabel(best_attribute);
   attributes.erase(find(attributes.begin(), attributes.end(), best_attribute));
   vector<string> values = this->possible_values[best_attribute];
-  cout << best_attribute << endl;
-/*
-  for (int i=0; i < values.size(); i++)
-    cout << values[i] << " ";
 
-  cout << endl;*/
-/*
-  char aa; cin >> aa;
-*/
   for (vector<string>::iterator it = values.begin(); it != values.end(); ++it){
     Node* node = new Node(current_node);
     current_node->addChild(node, *it);
     vector<Example> subset_of_examples = subsetOfExamples(examples, best_attribute, *it);
-  /*  for (int i = 0; i < subset_of_examples.size(); i++){
-      for (auto it = subset_of_examples[i].attributes.begin(); it != subset_of_examples[i].attributes.end(); ++it){
-        cout << "[" << it->first << "," << it->second << "] ";
-      }
-      cout << subset_of_examples[i].getTarget();
-      cout << endl ;
-    }
-    cout << endl << endl;
-    char ab; cin >> ab;
-*/
+
     if (subset_of_examples.empty()){
       node->setLabel(mostCommonTarget(examples));
       node->markAsLeaf();
@@ -232,6 +198,17 @@ void DecisionTree::ID3(const vector<Example>& examples, vector<string>& attribut
     else
       ID3(subset_of_examples, attributes, node);
   }
+}
+
+
+string DecisionTree::query(const Example& example){
+  Node* node = this->root;
+  while (!node->isLeaf()){
+    vector<string> names = node->getBranchesNames();
+    vector<string>::iterator it = find(names.begin(), names.end(), example[node->getLabel()]);
+    node = node->child(*it);
+  }
+  return node->getLabel();
 }
 
 /*  ______________________________________________________________________________ */
@@ -243,12 +220,24 @@ Node::Node(Node* parent){
   this->parent = parent;
 }
 
-void Node::setLabel(const string & label) {
+void Node::setLabel(const string & label){
   this->label = label;
 }
 
 string Node::getLabel() const{
   return this->label;
+}
+
+vector<string> Node::getBranchesNames() const{
+  vector<string> names;
+  for(map<string,Node*>::const_iterator it = branches.begin(); it != branches.end(); ++it){
+    names.push_back(it->first);
+  }
+  return names;
+}
+
+Node* Node::child(const string& name){
+  return this->branches.at(name);
 }
 
 void Node::addChild(Node*& node, string attribute_value){
@@ -275,9 +264,13 @@ map<string,Node*> Node::getBranches() const{
 
 Example::Example(const vector<string>& names, const vector<string>& values, const string& target){
   this->target = target;
-  for (int i=0; i < names.size(); i++){
+  for (int i=0; i < names.size(); i++)
     this->attributes[names[i]] = values[i];
-  }
+}
+
+Example::Example(const vector<string>& names, const vector<string>& values){
+  for (int i=0; i < names.size(); i++)
+    this->attributes[names[i]] = values[i];
 }
 
 string Example::operator[](const string& name) const {
@@ -308,11 +301,8 @@ pair<map<string,vector<string>>, vector<Example>> ARRF_Reader::readFile(const st
   getline(f,str,' ');
   getline(f,str,'\n');
 
-  cout << "Leyendo " << str << "..." << endl;
-
   // @attribute
   getline(f,str,'@');
-
   getline(f,str,' ');
 
   while (str == "attribute"){
@@ -346,7 +336,6 @@ pair<map<string,vector<string>>, vector<Example>> ARRF_Reader::readFile(const st
 
   while ( !f.eof() ){
     stringstream line(str);
-
     vector<string> data;
     string target;
 
@@ -359,15 +348,6 @@ pair<map<string,vector<string>>, vector<Example>> ARRF_Reader::readFile(const st
     examples.push_back(Example(attributes, data, target));
     getline(f,str,'\n');
   }
-
-  for (int i = 0; i < examples.size(); i++){
-    for (auto it = examples[i].attributes.begin(); it != examples[i].attributes.end(); ++it){
-      cout << "[" << it->first << "," << it->second << "] ";
-    }
-    cout << examples[i].getTarget();
-    cout << endl ;
-  }
-  cout << endl << endl;
 
   return make_pair(possible_values, examples);
 }

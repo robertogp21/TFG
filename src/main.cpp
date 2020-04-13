@@ -10,4 +10,9 @@ int main(int argc, char* argv[]){
 
   dt.setPossibleValues(possible_values);
   dt.ID3(examples);
+
+  vector<string> aa({"outlook","temperature","humidity","wind"});
+  vector<string> bb({"Sunny","Hot","High","Weak"});
+  Example e(aa,bb);
+  cout << dt.query(e) << endl;
 }

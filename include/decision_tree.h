@@ -36,6 +36,7 @@ class DecisionTree {
     ~DecisionTree();
     void setPossibleValues(const map<string,vector<string>>& possible_values);
     void ID3(const vector<Example>& examples);
+    string query(const Example& example);
 };
 
 class Node {
@@ -49,6 +50,8 @@ class Node {
     Node(Node* parent);
     void setLabel(const string & label);
     string getLabel() const;
+    vector<string> getBranchesNames() const;
+    Node* child(const string& name);
     void addChild(Node*& node, string attribute_value);
     void markAsLeaf();
     bool isLeaf() const;
@@ -57,14 +60,14 @@ class Node {
 
 class Example {
   private:
-
+    map<string,string> attributes;
     string target;
 
   public:
     Example(const vector<string>& names, const vector<string>& values, const string& target);
+    Example(const vector<string>& names, const vector<string>& values);
     string operator[](const string& name) const;
     string getTarget() const;
-    map<string,string> attributes;
 };
 
 class ARRF_Reader {
