@@ -1,0 +1,23 @@
+@relation tennis
+
+@attribute outlook {Sunny,Overcast,Rain}
+@attribute temperature {Hot,Mild,Cood}
+@attribute humidity {High,Normal}
+@attribute wind {Weak,Strong}
+@attribute playtennis {No,Yes}
+
+@data
+Sunny,Hot,High,Weak,No
+Sunny,Hot,High,Strong,No
+Overcast,Hot,High,Weak,Yes
+Rain,Mild,High,Weak,Yes
+Rain,Cood,Normal,Weak,Yes
+Rain,Cood,Normal,Strong,No
+Overcast,Cood,Normal,Strong,Yes
+Sunny,Mild,High,Weak,No
+Sunny,Cood,Normal,Weak,Yes
+Rain,Mild,Normal,Weak,Yes
+Sunny,Mild,Normal,Strong,Yes
+Overcast,Mild,High,Strong,Yes
+Overcast,Hot,Normal,Weak,Yes
+Rain,Mild,High,Strong,No
