@@ -8,6 +8,7 @@
 
 @data
 Sunny,Hot,High,Weak,No
+Sunny,Hot,High,Weak,Yes
 Sunny,Hot,High,Strong,No
 Overcast,Hot,High,Weak,Yes
 Rain,Mild,High,Weak,Yes

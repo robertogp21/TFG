@@ -29,21 +29,23 @@ class DecisionTree {
     double entropy(const map<string, int>& counter) const;
     string selectBestAttribute(const vector<Example>& examples, const vector<string>& attributes) const;
     vector<Example> subsetOfExamples(const vector<Example>& examples, const string & attribute, const string & value) const;
-    void ID3(const vector<Example>& examples, vector<string>& attributes, Node*& current_node);
+    void ID3(const vector<Example>& examples, vector<string> attributes, Node*& current_node);
 
   public:
     DecisionTree();
     ~DecisionTree();
     void setPossibleValues(const map<string,vector<string>>& possible_values);
     void ID3(const vector<Example>& examples);
-    string query(const Example& example);
+    string query(const Example& example) const;
+    vector<bool> predict(const vector<Example>& examples);
+    double accuraccy(const vector<Example>& examples);
 };
 
 class Node {
   private:
     Node* parent;
     string label;
-    map<string,Node*> branches;
+    map<string,pair<Node*,int>> branches;
     bool is_leaf;
 
   public:
@@ -53,9 +55,11 @@ class Node {
     vector<string> getBranchesNames() const;
     Node* child(const string& name);
     void addChild(Node*& node, string attribute_value);
+    void setInstancesOfBranch(string attribute_value, int n);
+    string getChildWithMoreInstances();
     void markAsLeaf();
     bool isLeaf() const;
-    map<string,Node*> getBranches() const;
+    map<string,pair<Node*,int>> getBranches() const;
 };
 
 class Example {
@@ -66,7 +70,7 @@ class Example {
   public:
     Example(const vector<string>& names, const vector<string>& values, const string& target);
     Example(const vector<string>& names, const vector<string>& values);
-    string operator[](const string& name) const;
+    string at(const string& name) const;
     string getTarget() const;
 };
 

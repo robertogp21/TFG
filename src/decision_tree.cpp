@@ -5,7 +5,6 @@ T sum(const vector<T>& v){
   return accumulate(v.begin(), v.end(), 0);
 }
 
-
 int argmax(const vector<double>& v){
   int pos_max = -1;
   double max = - numeric_limits<double>::infinity();
@@ -18,6 +17,13 @@ int argmax(const vector<double>& v){
   }
 
   return pos_max;
+}
+
+vector<string> getKeysFromMap(const map<string,vector<string>>& m){
+  vector<string> keys;
+  for (map<string,vector<string>>::const_iterator it = m.begin(); it != m.end(); ++it)
+    keys.push_back(it->first);
+  return keys;
 }
 
 
@@ -43,9 +49,9 @@ void DecisionTree::destroy(Node*& node){
   if (node != NULL){
     Node* n;
     if ( !node->isLeaf() ){
-      map<string, Node*> br = node->getBranches();
-      for (map<string,Node*>::iterator it= br.begin(); it != br.end(); ++it){
-        n = it -> second;
+      map<string,pair<Node*,int>> br = node->getBranches();
+      for (map<string,pair<Node*,int>>::iterator it= br.begin(); it != br.end(); ++it){
+        n = it -> second.first;
         destroy(n);
       }
     }
@@ -96,7 +102,7 @@ map<string, int> DecisionTree::countClasses(const vector<Example>& examples) con
 map<string, int> DecisionTree::countExamples(const vector<Example>& examples, const string& attribute, const string& value) const{
   map<string,int> counter;
   for (int i = 0; i < examples.size(); i++){
-    if (examples[i][attribute] == value){
+    if (examples[i].at(attribute) == value){
       ++counter[examples[i].getTarget()];
       ++counter["total"];
     }
@@ -146,7 +152,7 @@ string DecisionTree::selectBestAttribute(const vector<Example>& examples, const 
 vector<Example> DecisionTree::subsetOfExamples(const vector<Example>& examples, const string & attribute, const string & value) const{
   vector<Example> subset;
   for (int i = 0; i < examples.size() ; i++){
-    if ( examples[i][attribute] == value )
+    if ( examples[i].at(attribute) == value )
       subset.push_back(examples[i]);
   }
   return subset;
@@ -167,7 +173,7 @@ void DecisionTree::ID3(const vector<Example>& examples){
 }
 
 
-void DecisionTree::ID3(const vector<Example>& examples, vector<string>& attributes, Node*& current_node){
+void DecisionTree::ID3(const vector<Example>& examples, vector<string> attributes, Node*& current_node){
 
   if (sameClass(examples)){
     current_node->setLabel(examples[0].getTarget());
@@ -190,6 +196,7 @@ void DecisionTree::ID3(const vector<Example>& examples, vector<string>& attribut
     Node* node = new Node(current_node);
     current_node->addChild(node, *it);
     vector<Example> subset_of_examples = subsetOfExamples(examples, best_attribute, *it);
+    current_node->setInstancesOfBranch(*it, subset_of_examples.size());
 
     if (subset_of_examples.empty()){
       node->setLabel(mostCommonTarget(examples));
@@ -200,15 +207,40 @@ void DecisionTree::ID3(const vector<Example>& examples, vector<string>& attribut
   }
 }
 
-
-string DecisionTree::query(const Example& example){
+string DecisionTree::query(const Example& example) const{
   Node* node = this->root;
+
   while (!node->isLeaf()){
     vector<string> names = node->getBranchesNames();
-    vector<string>::iterator it = find(names.begin(), names.end(), example[node->getLabel()]);
-    node = node->child(*it);
+    vector<string>::iterator it = find(names.begin(), names.end(), example.at(node->getLabel()));
+    if (it != names.end())
+      node = node->child(*it);
+    else
+      node = node->child(node->getChildWithMoreInstances());
   }
+
   return node->getLabel();
+}
+
+
+vector<bool> DecisionTree::predict(const vector<Example>& examples){
+  const int N = examples.size();
+  vector<bool> predictions = vector<bool>(N);
+  for (int i=0; i < N; i++)
+    predictions[i] = examples[i].getTarget() == query(examples[i]);
+
+  return predictions;
+}
+
+
+double DecisionTree::accuraccy(const vector<Example>& examples){
+  vector<bool> predictions = predict(examples);
+  for (auto it = predictions.begin(); it != predictions.end(); ++it){
+    cout << *it << " ";
+  }
+  cout << endl;
+  int well_classified = count(predictions.begin(), predictions.end(), true);
+  return well_classified / (1.0 * examples.size());
 }
 
 /*  ______________________________________________________________________________ */
@@ -230,18 +262,35 @@ string Node::getLabel() const{
 
 vector<string> Node::getBranchesNames() const{
   vector<string> names;
-  for(map<string,Node*>::const_iterator it = branches.begin(); it != branches.end(); ++it){
+  for(map<string,pair<Node*,int>>::const_iterator it = branches.begin(); it != branches.end(); ++it){
     names.push_back(it->first);
   }
   return names;
 }
 
 Node* Node::child(const string& name){
-  return this->branches.at(name);
+  return this->branches.at(name).first;
 }
 
 void Node::addChild(Node*& node, string attribute_value){
-  this->branches[attribute_value] = node;
+  this->branches[attribute_value] = make_pair(node,0);
+}
+
+void Node::setInstancesOfBranch(string attribute_value, int n){
+  this->branches[attribute_value].second = n;
+}
+
+string Node::getChildWithMoreInstances(){
+  int max = -1;
+  string name = "";
+
+  for (map<string,pair<Node*,int>>::const_iterator it = branches.begin(); it != branches.end(); ++it){
+    if ( it->second.second > max){
+      max = it->second.second;
+      name = it->first;
+    }
+  }
+  return name;
 }
 
 void Node::markAsLeaf(){
@@ -252,7 +301,7 @@ bool Node::isLeaf() const{
   return is_leaf;
 }
 
-map<string,Node*> Node::getBranches() const{
+map<string,pair<Node*,int>> Node::getBranches() const{
   return branches;
 }
 
@@ -273,8 +322,12 @@ Example::Example(const vector<string>& names, const vector<string>& values){
     this->attributes[names[i]] = values[i];
 }
 
-string Example::operator[](const string& name) const {
-  return this->attributes.at(name);
+string Example::at(const string& name) const {
+  for (map<string,string>::const_iterator it = attributes.begin(); it != attributes.end(); ++it){
+    if (it->first == name)
+      return it->second;
+  }
+  return "";
 }
 
 string Example::getTarget() const{
@@ -315,6 +368,8 @@ pair<map<string,vector<string>>, vector<Example>> ARRF_Reader::readFile(const st
     stringstream line(str);
   	while ( line.peek() != '}' ){
   		getline(line, value,',');
+      if (value.back() == '\r')
+        value.pop_back();
   		attr_values.push_back(value);
   	}
 
@@ -336,18 +391,23 @@ pair<map<string,vector<string>>, vector<Example>> ARRF_Reader::readFile(const st
 
   while ( !f.eof() ){
     stringstream line(str);
+
     vector<string> data;
     string target;
 
     for (int i = 0; i < attributes.size(); i++){
       getline(line, value, ',');
+      if (value.back() == '\r')
+        value.pop_back();
       data.push_back(value);
     }
     getline(line, target, '\n');
-
+    if (target.back() == '\r')
+      target.pop_back();
     examples.push_back(Example(attributes, data, target));
     getline(f,str,'\n');
   }
 
+  f.close();
   return make_pair(possible_values, examples);
 }

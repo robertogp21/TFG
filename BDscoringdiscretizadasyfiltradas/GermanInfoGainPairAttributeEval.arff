@@ -1,0 +1,1013 @@
+@relation 'german_credit-weka.filters.supervised.attribute.Discretize-Rfirst-last-precision6-weka.filters.supervised.attribute.AttributeSelection-Eweka.attributeSelection.InfoGainPairAttributeEval -S 1.0-Sweka.attributeSelection.Ranker -T 0.638785 -N -1'
+
+@attribute checking_status {<0,0<=X<200,>=200,'no checking'}
+@attribute credit_history {'no credits/all paid','all paid','existing paid','delayed previously','critical/other existing credit'}
+@attribute purpose {'new car','used car',furniture/equipment,radio/tv,'domestic appliance',repairs,education,vacation,retraining,business,other}
+@attribute savings_status {<100,100<=X<500,500<=X<1000,>=1000,'no known savings'}
+@attribute duration {'\'(-inf-15.5]\'','\'(15.5-inf)\''}
+@attribute property_magnitude {'real estate','life insurance',car,'no known property'}
+@attribute employment {unemployed,<1,1<=X<4,4<=X<7,>=7}
+@attribute credit_amount {'\'(-inf-3913.5]\'','\'(3913.5-inf)\''}
+@attribute class {good,bad}
+
+@data
+<0,'critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',education,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+<0,'delayed previously','new car',<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',education,'no known savings','\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','used car',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,>=1000,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,unemployed,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',business,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'no credits/all paid',business,'no known savings','\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','used car',100<=X<500,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,'no known savings','\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','no credits/all paid',radio/tv,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+>=200,'all paid',radio/tv,>=1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'delayed previously',business,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',business,>=1000,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid','new car',100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',business,'no known savings','\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',education,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',good
+>=200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+>=200,'existing paid','domestic appliance',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,500<=X<1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',repairs,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+<0,'critical/other existing credit','used car',100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car',500<=X<1000,'\'(-inf-15.5]\'','life insurance',unemployed,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',furniture/equipment,'no known savings','\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','used car',<100,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car','no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','new car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','all paid','new car','no known savings','\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'','no known property',unemployed,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+>=200,'existing paid','new car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',business,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'no credits/all paid',business,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'no credits/all paid',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',repairs,'no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',>=1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',education,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',other,<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',business,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',education,'no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','used car',<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+0<=X<200,'delayed previously',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','no credits/all paid','used car','no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,100<=X<500,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',other,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',business,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',education,100<=X<500,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'existing paid','new car',100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'no credits/all paid',repairs,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','used car',<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+>=200,'critical/other existing credit',furniture/equipment,'no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',>=1000,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'no credits/all paid',business,<100,'\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',education,'no known savings','\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',business,100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','used car','no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car',100<=X<500,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car','no known savings','\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',other,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','all paid','new car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'','life insurance',<1,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',business,500<=X<1000,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',business,100<=X<500,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',education,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'existing paid',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',bad
+<0,'critical/other existing credit',furniture/equipment,'no known savings','\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+0<=X<200,'critical/other existing credit','new car',500<=X<1000,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','used car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',repairs,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit','used car',<100,'\'(-inf-15.5]\'',car,unemployed,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','new car','no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'delayed previously',education,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously','used car',>=1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid','new car',>=1000,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid',business,100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',100<=X<500,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,>=1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'critical/other existing credit','used car',>=1000,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+0<=X<200,'delayed previously',business,100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit',repairs,100<=X<500,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'all paid',retraining,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,100<=X<500,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','domestic appliance',500<=X<1000,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car',500<=X<1000,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,500<=X<1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',furniture/equipment,>=1000,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+0<=X<200,'critical/other existing credit',business,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',bad
+<0,'no credits/all paid','new car',<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',unemployed,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'delayed previously',education,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+'no checking','all paid','used car','no known savings','\'(15.5-inf)\'','real estate',unemployed,'\'(3913.5-inf)\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',radio/tv,500<=X<1000,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+0<=X<200,'delayed previously',business,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'all paid','new car','no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',furniture/equipment,>=1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid','used car',<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+0<=X<200,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'no credits/all paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,>=1000,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+0<=X<200,'no credits/all paid',business,100<=X<500,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit',education,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,100<=X<500,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','used car','no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',education,500<=X<1000,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',retraining,<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','domestic appliance',<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid','used car',>=1000,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'no credits/all paid',business,<100,'\'(15.5-inf)\'','life insurance',unemployed,'\'(3913.5-inf)\'',bad
+>=200,'delayed previously',business,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',retraining,'no known savings','\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'no credits/all paid',business,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid',education,'no known savings','\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,'no known savings','\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','no credits/all paid',repairs,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,>=1000,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(3913.5-inf)\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',<1,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','new car',500<=X<1000,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','new car','no known savings','\'(-inf-15.5]\'','life insurance',unemployed,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',business,100<=X<500,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car','no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'no credits/all paid','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',business,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','all paid',retraining,500<=X<1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','no credits/all paid','new car',100<=X<500,'\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',unemployed,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','new car',>=1000,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','delayed previously',furniture/equipment,100<=X<500,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',furniture/equipment,'no known savings','\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',radio/tv,'no known savings','\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'all paid',radio/tv,<100,'\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','used car',100<=X<500,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,100<=X<500,'\'(-inf-15.5]\'','real estate',unemployed,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',education,<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',business,'no known savings','\'(15.5-inf)\'','real estate',>=7,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car','no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,500<=X<1000,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid','new car','no known savings','\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',repairs,<100,'\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','used car',>=1000,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'all paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',100<=X<500,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','real estate',<1,'\'(3913.5-inf)\'',good
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+0<=X<200,'delayed previously',other,100<=X<500,'\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'delayed previously',radio/tv,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',business,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','used car',<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+<0,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+>=200,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',business,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','used car','no known savings','\'(-inf-15.5]\'',car,<1,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car','no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,>=1000,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',unemployed,'\'(-inf-3913.5]\'',good
+0<=X<200,'no credits/all paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+>=200,'critical/other existing credit','new car','no known savings','\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',500<=X<1000,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',furniture/equipment,>=1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car','no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'','no known property',<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',other,'no known savings','\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+'no checking','existing paid',furniture/equipment,100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+>=200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',bad
+>=200,'existing paid','new car','no known savings','\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'all paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',education,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'delayed previously',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,unemployed,'\'(3913.5-inf)\'',bad
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,>=1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car',>=1000,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',education,100<=X<500,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','new car',100<=X<500,'\'(15.5-inf)\'','life insurance',<1,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','used car',100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'no credits/all paid',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid','domestic appliance','no known savings','\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',education,<100,'\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',business,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(3913.5-inf)\'',good
+>=200,'existing paid','new car',<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'','no known property',unemployed,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,100<=X<500,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',education,>=1000,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','domestic appliance',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'','no known property',unemployed,'\'(-inf-3913.5]\'',good
+<0,'no credits/all paid',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',education,500<=X<1000,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',education,'no known savings','\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+>=200,'delayed previously','new car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',business,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','used car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car','no known savings','\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car','no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+0<=X<200,'all paid',other,100<=X<500,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+<0,'all paid',business,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',bad
+'no checking','delayed previously',radio/tv,<100,'\'(15.5-inf)\'','real estate',unemployed,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',radio/tv,'no known savings','\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','new car',100<=X<500,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','used car',<100,'\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','new car','no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,100<=X<500,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'critical/other existing credit',business,500<=X<1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,>=1000,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'',car,unemployed,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',education,100<=X<500,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','no known property',unemployed,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,>=1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',business,'no known savings','\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+'no checking','delayed previously','new car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','new car','no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit','new car',500<=X<1000,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','used car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',business,<100,'\'(-inf-15.5]\'',car,unemployed,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car',500<=X<1000,'\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car','no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','used car',<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(3913.5-inf)\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+<0,'delayed previously',education,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car',500<=X<1000,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car','no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car',>=1000,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','used car','no known savings','\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',furniture/equipment,100<=X<500,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','used car',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,>=1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',repairs,<100,'\'(15.5-inf)\'','no known property',unemployed,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',business,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',other,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','no known property',unemployed,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',repairs,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',repairs,500<=X<1000,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',>=1000,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',repairs,<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',good
+>=200,'all paid',business,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car',<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',other,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',education,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',education,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',furniture/equipment,'no known savings','\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',repairs,>=1000,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','no credits/all paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','used car',<100,'\'(15.5-inf)\'','no known property',<1,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car',<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','domestic appliance',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',retraining,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'delayed previously',radio/tv,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+'no checking','delayed previously',radio/tv,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+'no checking','delayed previously',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously','used car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',education,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',retraining,'no known savings','\'(-inf-15.5]\'','life insurance',unemployed,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'no credits/all paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','used car',500<=X<1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',business,100<=X<500,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,>=1000,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',furniture/equipment,>=1000,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',500<=X<1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','new car',<100,'\'(-inf-15.5]\'','life insurance',unemployed,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',100<=X<500,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'no credits/all paid',business,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',radio/tv,100<=X<500,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',furniture/equipment,100<=X<500,'\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit','new car',100<=X<500,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+>=200,'existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,100<=X<500,'\'(15.5-inf)\'','no known property',<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car','no known savings','\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+>=200,'critical/other existing credit','used car',500<=X<1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid','new car',100<=X<500,'\'(-inf-15.5]\'','life insurance',unemployed,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car',100<=X<500,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','used car',<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',good
+>=200,'existing paid',business,<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car','no known savings','\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(3913.5-inf)\'',bad
+<0,'existing paid','new car',100<=X<500,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',repairs,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'no credits/all paid',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','used car',100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','used car',<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',education,100<=X<500,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',education,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',100<=X<500,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','delayed previously','used car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit',education,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car','no known savings','\'(-inf-15.5]\'','life insurance',unemployed,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+>=200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','delayed previously','new car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(3913.5-inf)\'',bad
+>=200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'delayed previously','new car',<100,'\'(15.5-inf)\'','real estate',unemployed,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'all paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'','no known property',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',repairs,'no known savings','\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','all paid',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(3913.5-inf)\'',bad
+0<=X<200,'critical/other existing credit','new car',100<=X<500,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',education,<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'no credits/all paid','new car',100<=X<500,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+'no checking','no credits/all paid','new car','no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'all paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','used car','no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+<0,'all paid',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',bad
+>=200,'delayed previously',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car','no known savings','\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+0<=X<200,'delayed previously',business,'no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'delayed previously',radio/tv,100<=X<500,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,>=1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','used car','no known savings','\'(15.5-inf)\'','life insurance',unemployed,'\'(3913.5-inf)\'',good
+<0,'existing paid',business,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',education,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',retraining,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',repairs,<100,'\'(15.5-inf)\'','no known property',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car','no known savings','\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','domestic appliance',<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','new car','no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,>=1000,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'all paid',other,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'all paid','new car',100<=X<500,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'no credits/all paid',business,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','delayed previously',business,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'all paid',education,<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+>=200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+<0,'all paid',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',business,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car','no known savings','\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','domestic appliance',100<=X<500,'\'(-inf-15.5]\'','life insurance',unemployed,'\'(-inf-3913.5]\'',bad
+>=200,'existing paid','new car',100<=X<500,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',radio/tv,>=1000,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'all paid','used car',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'no credits/all paid',business,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'delayed previously',radio/tv,'no known savings','\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',business,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',business,'no known savings','\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid','new car',100<=X<500,'\'(-inf-15.5]\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid',education,'no known savings','\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'all paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',education,<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'delayed previously',radio/tv,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',bad
+<0,'existing paid',education,<100,'\'(15.5-inf)\'','real estate',unemployed,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',repairs,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',education,100<=X<500,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,'no known savings','\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+<0,'no credits/all paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car',500<=X<1000,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+>=200,'existing paid','new car',<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',education,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',education,<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'delayed previously','new car',100<=X<500,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','used car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+0<=X<200,'no credits/all paid',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+>=200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car','no known savings','\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',unemployed,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit',education,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',other,<100,'\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'all paid',furniture/equipment,>=1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','all paid',business,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(3913.5-inf)\'',bad
+>=200,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',business,100<=X<500,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid',business,100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit','new car',500<=X<1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',business,500<=X<1000,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',education,<100,'\'(-inf-15.5]\'','no known property',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',good
+0<=X<200,'delayed previously',business,100<=X<500,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car','no known savings','\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',good
+>=200,'critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','new car',100<=X<500,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',>=1000,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',repairs,100<=X<500,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car','no known savings','\'(-inf-15.5]\'','real estate',<1,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car',500<=X<1000,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',unemployed,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',education,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,500<=X<1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+>=200,'existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',business,100<=X<500,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',business,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',500<=X<1000,'\'(-inf-15.5]\'','no known property',>=7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid','new car',100<=X<500,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',bad
+0<=X<200,'no credits/all paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,500<=X<1000,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'all paid',education,<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','used car','no known savings','\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'no credits/all paid','used car',100<=X<500,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+>=200,'no credits/all paid',radio/tv,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'all paid',education,>=1000,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car',>=1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'all paid',business,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+>=200,'critical/other existing credit',business,>=1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',radio/tv,<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','used car',>=1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid','domestic appliance','no known savings','\'(15.5-inf)\'','no known property',<1,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid','used car',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'existing paid','new car',100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','no known property',4<=X<7,'\'(3913.5-inf)\'',good
+0<=X<200,'no credits/all paid',business,100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'all paid','new car',100<=X<500,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'all paid',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,'no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+<0,'critical/other existing credit',business,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'',car,unemployed,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','used car','no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid','used car',<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',business,100<=X<500,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','delayed previously',repairs,>=1000,'\'(-inf-15.5]\'','no known property',>=7,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car','no known savings','\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',bad
+>=200,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car',<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car','no known savings','\'(-inf-15.5]\'',car,>=7,'\'(3913.5-inf)\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car','no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','new car',100<=X<500,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','used car','no known savings','\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car','no known savings','\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',education,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','used car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,100<=X<500,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit','new car',500<=X<1000,'\'(-inf-15.5]\'','no known property',unemployed,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car','no known savings','\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','used car',>=1000,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',repairs,<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','new car',>=1000,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'no credits/all paid',retraining,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car',100<=X<500,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','used car','no known savings','\'(15.5-inf)\'','real estate',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',business,>=1000,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',education,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+<0,'critical/other existing credit',education,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',business,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','used car','no known savings','\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',furniture/equipment,'no known savings','\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,100<=X<500,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car','no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously','new car','no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car','no known savings','\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',education,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car','no known savings','\'(-inf-15.5]\'','real estate',unemployed,'\'(3913.5-inf)\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'all paid','used car',<100,'\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'no credits/all paid','new car',<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',business,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',bad
+<0,'existing paid','domestic appliance',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(3913.5-inf)\'',bad
+0<=X<200,'delayed previously','new car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid','domestic appliance',500<=X<1000,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',other,<100,'\'(15.5-inf)\'',car,unemployed,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'','real estate',>=7,'\'(3913.5-inf)\'',bad
+'no checking','no credits/all paid',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'existing paid','used car','no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+0<=X<200,'delayed previously',business,'no known savings','\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','delayed previously',business,500<=X<1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',bad
+<0,'no credits/all paid',business,<100,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+>=200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+<0,'no credits/all paid','new car',<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',bad
+'no checking','delayed previously','used car',<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',repairs,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','all paid',business,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car','no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','new car',<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'all paid','new car',<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',bad
+'no checking','delayed previously','new car',<100,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car',100<=X<500,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',retraining,'no known savings','\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','new car',100<=X<500,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','used car',>=1000,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','delayed previously',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',furniture/equipment,>=1000,'\'(15.5-inf)\'','real estate',<1,'\'(3913.5-inf)\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',furniture/equipment,500<=X<1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,'no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(3913.5-inf)\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+>=200,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',business,100<=X<500,'\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','domestic appliance','no known savings','\'(-inf-15.5]\'','real estate',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','new car',>=1000,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'all paid',radio/tv,<100,'\'(15.5-inf)\'','no known property',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','no known property',<1,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','used car',<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+'no checking','existing paid','used car','no known savings','\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'critical/other existing credit','new car','no known savings','\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',bad
+<0,'existing paid',education,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit',business,'no known savings','\'(15.5-inf)\'','no known property',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',business,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(15.5-inf)\'',car,>=7,'\'(3913.5-inf)\'',good
+'no checking','all paid','used car','no known savings','\'(15.5-inf)\'','real estate',<1,'\'(3913.5-inf)\'',good
+<0,'critical/other existing credit',business,<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit','used car',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously','used car','no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',furniture/equipment,>=1000,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,'no known savings','\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+<0,'critical/other existing credit','new car',<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car','no known savings','\'(15.5-inf)\'','real estate',<1,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(15.5-inf)\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car','no known savings','\'(15.5-inf)\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',education,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously','used car',<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid','new car','no known savings','\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',radio/tv,<100,'\'(15.5-inf)\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',business,>=1000,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'all paid',business,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'no credits/all paid',other,<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','existing paid','used car',100<=X<500,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+<0,'existing paid',furniture/equipment,100<=X<500,'\'(15.5-inf)\'','life insurance',unemployed,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,4<=X<7,'\'(3913.5-inf)\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','new car',<100,'\'(-inf-15.5]\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'all paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(3913.5-inf)\'',bad
+<0,'all paid','new car',<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',bad
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','no known property',4<=X<7,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'delayed previously','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',bad
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,500<=X<1000,'\'(-inf-15.5]\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',radio/tv,100<=X<500,'\'(15.5-inf)\'','no known property',<1,'\'(-inf-3913.5]\'',bad
+>=200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',education,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit','used car','no known savings','\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car','no known savings','\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'no credits/all paid','new car',500<=X<1000,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',good
+<0,'all paid',furniture/equipment,500<=X<1000,'\'(15.5-inf)\'','no known property',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid','new car','no known savings','\'(-inf-15.5]\'','no known property',unemployed,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,100<=X<500,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit',business,<100,'\'(15.5-inf)\'',car,unemployed,'\'(-inf-3913.5]\'',good
+<0,'delayed previously',business,<100,'\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid','used car',500<=X<1000,'\'(15.5-inf)\'',car,<1,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',furniture/equipment,<100,'\'(15.5-inf)\'',car,unemployed,'\'(3913.5-inf)\'',bad
+<0,'existing paid','new car',<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',radio/tv,>=1000,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+>=200,'critical/other existing credit',radio/tv,'no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','new car',<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(3913.5-inf)\'',bad
+0<=X<200,'existing paid',furniture/equipment,100<=X<500,'\'(15.5-inf)\'','no known property',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',radio/tv,<100,'\'(-inf-15.5]\'','real estate',>=7,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously','new car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car','no known savings','\'(-inf-15.5]\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'existing paid',repairs,<100,'\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'critical/other existing credit',radio/tv,500<=X<1000,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,'no known savings','\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',good
+<0,'critical/other existing credit','new car',<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(3913.5-inf)\'',good
+0<=X<200,'existing paid',repairs,100<=X<500,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid','new car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',good
+<0,'all paid','new car',<100,'\'(15.5-inf)\'','no known property',unemployed,'\'(-inf-3913.5]\'',bad
+<0,'existing paid',business,<100,'\'(15.5-inf)\'','no known property',>=7,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'existing paid',radio/tv,500<=X<1000,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'existing paid',radio/tv,<100,'\'(-inf-15.5]\'','real estate',1<=X<4,'\'(-inf-3913.5]\'',good
+0<=X<200,'delayed previously',business,'no known savings','\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','delayed previously','new car',<100,'\'(15.5-inf)\'',car,>=7,'\'(-inf-3913.5]\'',bad
+0<=X<200,'all paid','new car',100<=X<500,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(3913.5-inf)\'',bad
+'no checking','existing paid',business,<100,'\'(15.5-inf)\'',car,unemployed,'\'(3913.5-inf)\'',bad
+>=200,'existing paid','new car',100<=X<500,'\'(15.5-inf)\'',car,1<=X<4,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(3913.5-inf)\'',bad
+'no checking','critical/other existing credit',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'critical/other existing credit',furniture/equipment,<100,'\'(-inf-15.5]\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+>=200,'no credits/all paid',business,<100,'\'(15.5-inf)\'','life insurance',<1,'\'(3913.5-inf)\'',good
+'no checking','existing paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'','real estate',unemployed,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','no known property',unemployed,'\'(3913.5-inf)\'',good
+0<=X<200,'critical/other existing credit',radio/tv,<100,'\'(15.5-inf)\'','life insurance',>=7,'\'(-inf-3913.5]\'',good
+'no checking','critical/other existing credit',education,'no known savings','\'(-inf-15.5]\'','life insurance',<1,'\'(-inf-3913.5]\'',good
+'no checking','all paid',radio/tv,100<=X<500,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,'no known savings','\'(15.5-inf)\'',car,4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',furniture/equipment,<100,'\'(15.5-inf)\'','life insurance',unemployed,'\'(3913.5-inf)\'',good
+'no checking','existing paid','new car','no known savings','\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',furniture/equipment,<100,'\'(-inf-15.5]\'','real estate',4<=X<7,'\'(-inf-3913.5]\'',good
+<0,'existing paid','used car',<100,'\'(15.5-inf)\'','life insurance',1<=X<4,'\'(-inf-3913.5]\'',good
+'no checking','existing paid',radio/tv,<100,'\'(-inf-15.5]\'',car,>=7,'\'(-inf-3913.5]\'',good
+<0,'existing paid',radio/tv,<100,'\'(15.5-inf)\'','no known property',1<=X<4,'\'(-inf-3913.5]\'',bad
+0<=X<200,'critical/other existing credit','used car',100<=X<500,'\'(15.5-inf)\'',car,unemployed,'\'(3913.5-inf)\'',good
